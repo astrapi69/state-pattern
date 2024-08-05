@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -26,9 +26,18 @@ package io.github.astrapi69.design.pattern.state.stopwatch;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Test class for {@link StopWatchStateContextMachine}.
+ */
 public class StopWatchStateContextMachineTest
 {
 
+	/**
+	 * Test the start, pause, stop, and reset functions of the {@link StopWatchStateContextMachine}.
+	 *
+	 * @throws InterruptedException
+	 *             if the thread is interrupted while sleeping
+	 */
 	@Test
 	public void testStart() throws InterruptedException
 	{
@@ -43,5 +52,4 @@ public class StopWatchStateContextMachineTest
 		context.reset();
 		context.start();
 	}
-
 }

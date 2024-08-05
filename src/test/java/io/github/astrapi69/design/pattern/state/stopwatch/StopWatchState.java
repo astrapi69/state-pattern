@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -25,7 +25,8 @@
 package io.github.astrapi69.design.pattern.state.stopwatch;
 
 /**
- * The class WizardState.
+ * The enum {@link StopWatchState} represents the states of a stopwatch and defines the transitions
+ * between them.
  */
 public enum StopWatchState implements StopWatchTransition
 {
@@ -158,5 +159,4 @@ public enum StopWatchState implements StopWatchTransition
 			context.setCurrent(this);
 		}
 	}
-
 }

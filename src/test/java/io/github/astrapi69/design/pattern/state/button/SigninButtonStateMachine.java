@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -32,6 +32,10 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
+/**
+ * The class {@link SigninButtonStateMachine} represents a state machine for a sign-in button. It
+ * implements the {@link SigninButtonState} interface and extends {@link ButtonStateMachine}.
+ */
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = true)
@@ -43,9 +47,20 @@ public class SigninButtonStateMachine extends ButtonStateMachine<MyButton, Signi
 	implements
 		SigninButtonState
 {
+
+	/**
+	 * Indicates if the master password is used.
+	 */
 	boolean withMasterPassword;
+
+	/**
+	 * Indicates if an application file is present.
+	 */
 	boolean applicationFilePresent;
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void onApplicationFileAdded()
 	{
@@ -54,6 +69,9 @@ public class SigninButtonStateMachine extends ButtonStateMachine<MyButton, Signi
 		updateButtonState();
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void onChangeWithMasterPassword()
 	{
@@ -62,6 +80,9 @@ public class SigninButtonStateMachine extends ButtonStateMachine<MyButton, Signi
 		updateButtonState();
 	}
 
+	/**
+	 * Updates the state of the sign-in button based on the current conditions.
+	 */
 	protected void updateButtonState()
 	{
 		if (isApplicationFilePresent() && isWithMasterPassword())
@@ -76,9 +97,14 @@ public class SigninButtonStateMachine extends ButtonStateMachine<MyButton, Signi
 		}
 	}
 
+	/**
+	 * Sets the enabled state of the sign-in button.
+	 *
+	 * @param enabled
+	 *            the new enabled state
+	 */
 	public void setEnabled(final boolean enabled)
 	{
 		getButton().setEnabled(enabled);
 	}
-
 }

@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -37,7 +37,7 @@ import lombok.experimental.FieldDefaults;
 import lombok.experimental.SuperBuilder;
 
 /**
- * The class {@link NewPrivateKeyModelBean}
+ * The class {@link NewPrivateKeyModelBean} represents the model for generating a new private key.
  */
 @Data
 @NoArgsConstructor
@@ -46,18 +46,35 @@ import lombok.experimental.SuperBuilder;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class NewPrivateKeyModelBean
 {
+
+	/**
+	 * The length of the key.
+	 */
 	int keyLength;
 
+	/**
+	 * The key size for the private key.
+	 */
 	@Builder.Default
 	KeySize keySize = KeySize.KEYSIZE_2048;
 
+	/**
+	 * The generated private key.
+	 */
 	PrivateKey privateKey;
 
-	/** The private key directory */
+	/**
+	 * The directory where the private key will be stored.
+	 */
 	File privateKeyDirectory;
 
+	/**
+	 * The filename of the private key.
+	 */
 	String filenameOfPrivateKey;
 
-	/** The private key file */
+	/**
+	 * The private key file.
+	 */
 	File privateKeyFile;
 }

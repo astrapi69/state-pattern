@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -25,7 +25,7 @@
 package io.github.astrapi69.design.pattern.state.stopwatch;
 
 /**
- * The Class StopWatch.
+ * The class {@link StopWatch} represents a simple stopwatch to measure elapsed time.
  */
 public class StopWatch
 {
@@ -39,7 +39,7 @@ public class StopWatch
 	/** The elapsed milliseconds. */
 	private long elapsedMilliseconds = 0;
 
-	/** The running. */
+	/** Indicates if the stopwatch is running. */
 	private boolean running = false;
 
 	/**
@@ -51,7 +51,6 @@ public class StopWatch
 	{
 		return elapsedMilliseconds;
 	}
-
 
 	/**
 	 * Gets the elapsed time in milliseconds.
@@ -90,7 +89,7 @@ public class StopWatch
 	}
 
 	/**
-	 * Start.
+	 * Starts the stopwatch.
 	 */
 	public void start()
 	{
@@ -98,9 +97,8 @@ public class StopWatch
 		this.running = true;
 	}
 
-
 	/**
-	 * Stop.
+	 * Stops the stopwatch.
 	 */
 	public void stop()
 	{

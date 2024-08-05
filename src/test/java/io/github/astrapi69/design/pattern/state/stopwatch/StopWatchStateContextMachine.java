@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -33,7 +33,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * The class StopWatchStateContextMachine.
+ * The class {@link StopWatchStateContextMachine} represents a context for the state machine of a
+ * stopwatch.
  */
 @Getter
 @Setter
@@ -45,17 +46,16 @@ import lombok.ToString;
 public class StopWatchStateContextMachine
 {
 
-	/** The stop watch. */
+	/** The stopwatch. */
 	@Builder.Default
 	private StopWatch stopWatch = new StopWatch();
 
-	/** The current. */
+	/** The current state of the stopwatch. */
 	@Builder.Default
 	private StopWatchState current = StopWatchState.READY;
 
-
 	/**
-	 * Pause.
+	 * Pauses the stopwatch.
 	 */
 	public void pause()
 	{
@@ -63,7 +63,7 @@ public class StopWatchStateContextMachine
 	}
 
 	/**
-	 * Reset.
+	 * Resets the stopwatch.
 	 */
 	public void reset()
 	{
@@ -71,7 +71,7 @@ public class StopWatchStateContextMachine
 	}
 
 	/**
-	 * Start.
+	 * Starts the stopwatch.
 	 */
 	public void start()
 	{
@@ -79,7 +79,7 @@ public class StopWatchStateContextMachine
 	}
 
 	/**
-	 * Stop.
+	 * Stops the stopwatch.
 	 */
 	public void stop()
 	{

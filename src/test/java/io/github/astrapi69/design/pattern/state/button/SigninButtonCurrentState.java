@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -24,7 +24,19 @@
  */
 package io.github.astrapi69.design.pattern.state.button;
 
+/**
+ * The enum {@link SigninButtonCurrentState} represents the possible states of a sign-in button.
+ */
 public enum SigninButtonCurrentState implements ButtonState<SigninButtonStateMachine>
 {
-	ENABLED, DISABLED
+
+	/**
+	 * The enabled state of the sign-in button.
+	 */
+	ENABLED,
+
+	/**
+	 * The disabled state of the sign-in button.
+	 */
+	DISABLED
 }

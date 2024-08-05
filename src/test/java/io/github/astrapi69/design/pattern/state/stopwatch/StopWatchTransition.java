@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -25,13 +25,13 @@
 package io.github.astrapi69.design.pattern.state.stopwatch;
 
 /**
- * The interface transition.
+ * The interface {@link StopWatchTransition} defines the transitions for the states of a stopwatch.
  */
 public interface StopWatchTransition
 {
 
 	/**
-	 * Stop.
+	 * Stops the stopwatch.
 	 *
 	 * @param context
 	 *            the state context
@@ -39,7 +39,7 @@ public interface StopWatchTransition
 	void stop(final StopWatchStateContextMachine context);
 
 	/**
-	 * Start.
+	 * Starts the stopwatch.
 	 *
 	 * @param context
 	 *            the state context
@@ -47,7 +47,7 @@ public interface StopWatchTransition
 	void start(final StopWatchStateContextMachine context);
 
 	/**
-	 * Reset.
+	 * Resets the stopwatch.
 	 *
 	 * @param context
 	 *            the state context
@@ -55,7 +55,7 @@ public interface StopWatchTransition
 	void reset(final StopWatchStateContextMachine context);
 
 	/**
-	 * Pause.
+	 * Pauses the stopwatch.
 	 *
 	 * @param context
 	 *            the state context

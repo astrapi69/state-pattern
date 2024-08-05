@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -39,6 +39,11 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
+/**
+ * The class {@link BtnSaveStateMachine} represents a state machine for a save button component. It
+ * implements the {@link BtnSaveComponentState} interface and extends
+ * {@link AbstractJComponentStateMachine}.
+ */
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = true)
@@ -52,8 +57,15 @@ public class BtnSaveStateMachine
 	implements
 		BtnSaveComponentState
 {
+
+	/**
+	 * The model object associated with the state machine.
+	 */
 	NewPrivateKeyModelBean modelObject;
 
+	/**
+	 * Updates the state of the save button based on the model object.
+	 */
 	@Override
 	protected void updateComponentState()
 	{
@@ -75,50 +87,73 @@ public class BtnSaveStateMachine
 		setEnabled(false);
 	}
 
-
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void onInitialize()
 	{
 		updateComponentState();
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void onGenerate()
 	{
 		updateComponentState();
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void onClear()
 	{
 		updateComponentState();
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void onChangeFilename()
 	{
 		updateComponentState();
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void onChangeDirectory()
 	{
 		updateComponentState();
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void onChangeKeySize()
 	{
 		updateComponentState();
 	}
 
+	/**
+	 * Checks if the given object is empty.
+	 *
+	 * @param obj
+	 *            the object to check
+	 * @return true if the object is empty, otherwise false
+	 */
 	public boolean isEmpty(Object obj)
 	{
 		if (obj == null)
 		{
 			return true;
 		}
-
 		if (obj instanceof Optional)
 		{
 			return !((Optional<?>)obj).isPresent();
@@ -139,8 +174,6 @@ public class BtnSaveStateMachine
 		{
 			return ((Map<?, ?>)obj).isEmpty();
 		}
-
-		// else
 		return false;
 	}
 }

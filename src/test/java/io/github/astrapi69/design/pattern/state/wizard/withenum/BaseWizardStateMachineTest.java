@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -32,20 +32,20 @@ import io.github.astrapi69.design.pattern.state.wizard.BaseWizardState;
 import io.github.astrapi69.design.pattern.state.wizard.BaseWizardStateMachine;
 import io.github.astrapi69.design.pattern.state.wizard.WizardStateMachine;
 
-public class BaseWizardStateMachineTest
-{
-
+/**
+ * Test class for {@link BaseWizardStateMachine}.
+ */
+public class BaseWizardStateMachineTest {
 
 	/**
 	 * Test method for the methods previous and next of the {@link WizardStateMachine}.
 	 */
 	@Test
-	public void testWizardStateMachine()
-	{
+	public void testWizardStateMachine() {
 		EnumBaseWizardWizardState expected;
 		BaseWizardState<BaseWizardStateMachine> actual;
 		final BaseWizardStateMachine stateMachine = BaseWizardStateMachine.builder()
-			.currentState(EnumBaseWizardWizardState.FIRST).build();
+				.currentState(EnumBaseWizardWizardState.FIRST).build();
 
 		expected = EnumBaseWizardWizardState.FIRST;
 		stateMachine.previous();
@@ -78,7 +78,5 @@ public class BaseWizardStateMachineTest
 		stateMachine.finish();
 		actual = stateMachine.getCurrentState();
 		assertEquals(expected, actual);
-
 	}
-
 }

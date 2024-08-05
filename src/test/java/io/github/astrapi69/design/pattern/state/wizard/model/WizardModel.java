@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -33,9 +33,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * The class {@link WizardModel} act as a model for a wizard.<br>
- * This wizard model serves only as an example.<br>
- * You can create a specific wizard model to your requirements.
+ * The class {@link WizardModel} acts as a model for a wizard. This wizard model serves only as an
+ * example. You can create a specific wizard model to your requirements.
  */
 @Getter
 @Setter

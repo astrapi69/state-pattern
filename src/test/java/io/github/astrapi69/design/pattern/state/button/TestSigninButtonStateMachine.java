@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -31,11 +31,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test class for class {@link SigninButtonStateMachine}
+ * Test class for {@link SigninButtonStateMachine}.
  */
 public class TestSigninButtonStateMachine
 {
 
+	/**
+	 * Test the state transitions of the {@link SigninButtonStateMachine}.
+	 */
 	@Test
 	public void testState()
 	{
@@ -44,32 +47,38 @@ public class TestSigninButtonStateMachine
 		SigninButtonStateMachine buttonStateMachine = SigninButtonStateMachine.builder()
 			.button(MyButton.builder().text("OK").enabled(false).build())
 			.current(SigninButtonCurrentState.DISABLED).build();
-		// test case that no operation the current state is initial ButtonStateEnum.DISABLED
+
+		// Test case: no operation, the current state is initially SigninButtonCurrentState.DISABLED
 		expected = SigninButtonCurrentState.DISABLED;
 		actual = buttonStateMachine.getCurrent();
 		assertEquals(expected, actual);
 		assertFalse(buttonStateMachine.getButton().isEnabled());
-		// test case that add application file the current state is still ButtonStateEnum.DISABLED
-		// because both application file and password should be true for get enabled state
+
+		// Test case: add application file, the current state is still
+		// SigninButtonCurrentState.DISABLED
+		// because both application file and password should be true to get the enabled state
 		buttonStateMachine.onApplicationFileAdded();
 		expected = SigninButtonCurrentState.DISABLED;
 		actual = buttonStateMachine.getCurrent();
 		assertEquals(expected, actual);
 		assertFalse(buttonStateMachine.getButton().isEnabled());
-		// test case both application file and password are true so the current state is
-		// ButtonStateEnum.ENABLED
+
+		// Test case: both application file and password are true, so the current state is
+		// SigninButtonCurrentState.ENABLED
 		buttonStateMachine.onChangeWithMasterPassword();
 		expected = SigninButtonCurrentState.ENABLED;
 		actual = buttonStateMachine.getCurrent();
 		assertEquals(expected, actual);
 		assertTrue(buttonStateMachine.getButton().isEnabled());
-		// toggle password to false will cause the disable state transition
+
+		// Toggle password to false will cause the disabled state transition
 		buttonStateMachine.onChangeWithMasterPassword();
 		expected = SigninButtonCurrentState.DISABLED;
 		actual = buttonStateMachine.getCurrent();
 		assertEquals(expected, actual);
 		assertFalse(buttonStateMachine.getButton().isEnabled());
-		// toggle password to true will cause the enable state transition
+
+		// Toggle password to true will cause the enabled state transition
 		buttonStateMachine.onChangeWithMasterPassword();
 		expected = SigninButtonCurrentState.ENABLED;
 		actual = buttonStateMachine.getCurrent();

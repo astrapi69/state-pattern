@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -29,12 +29,23 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * The class {@link MyButton} represents a button with a text and enabled state.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
 public class MyButton
 {
+
+	/**
+	 * The text of the button.
+	 */
 	String text;
+
+	/**
+	 * The enabled state of the button.
+	 */
 	boolean enabled;
 }

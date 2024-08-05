@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -41,9 +41,20 @@ import io.github.astrapi69.crypt.api.key.KeySize;
 import io.github.astrapi69.crypt.data.factory.KeyPairFactory;
 import io.github.astrapi69.file.search.PathFinder;
 
+/**
+ * Test class for {@link BtnSaveStateMachine}.
+ */
 public class BtnSaveStateMachineTest
 {
 
+	/**
+	 * Test the state transitions of the {@link BtnSaveStateMachine}.
+	 *
+	 * @throws NoSuchAlgorithmException
+	 *             if the algorithm is not available
+	 * @throws NoSuchProviderException
+	 *             if the provider is not available
+	 */
 	@Test
 	public void testState() throws NoSuchAlgorithmException, NoSuchProviderException
 	{

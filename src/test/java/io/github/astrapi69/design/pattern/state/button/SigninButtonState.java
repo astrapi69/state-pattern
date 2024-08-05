@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -24,10 +24,20 @@
  */
 package io.github.astrapi69.design.pattern.state.button;
 
+/**
+ * The interface {@link SigninButtonState} extends {@link ButtonState} for a sign-in button state
+ * machine.
+ */
 public interface SigninButtonState extends ButtonState<SigninButtonStateMachine>
 {
+
+	/**
+	 * Triggered when an application file is added.
+	 */
 	void onApplicationFileAdded();
 
+	/**
+	 * Triggered when there is a change with the master password.
+	 */
 	void onChangeWithMasterPassword();
-
 }

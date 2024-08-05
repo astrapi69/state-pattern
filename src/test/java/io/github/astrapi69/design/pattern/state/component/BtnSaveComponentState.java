@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2024 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -24,17 +24,40 @@
  */
 package io.github.astrapi69.design.pattern.state.component;
 
+/**
+ * The interface {@link BtnSaveComponentState} defines the states and actions for a save button
+ * component.
+ */
 public interface BtnSaveComponentState
 {
+
+	/**
+	 * Triggered when the component is initialized.
+	 */
 	void onInitialize();
 
+	/**
+	 * Triggered when the component generates an output.
+	 */
 	void onGenerate();
 
+	/**
+	 * Triggered when the component is cleared.
+	 */
 	void onClear();
 
+	/**
+	 * Triggered when the filename is changed.
+	 */
 	void onChangeFilename();
 
+	/**
+	 * Triggered when the directory is changed.
+	 */
 	void onChangeDirectory();
 
+	/**
+	 * Triggered when the key size is changed.
+	 */
 	void onChangeKeySize();
 }
