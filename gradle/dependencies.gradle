@@ -5,6 +5,9 @@ dependencies {
     testCompileOnly libs.lombok
     testAnnotationProcessor libs.lombok
 
+    testImplementation libs.crypt.api
+    testImplementation libs.crypt.data
+    testImplementation libs.file.worker
     testImplementation libs.commons.text
     testImplementation libs.file.worker
     testImplementation libs.gradle.migration.data
