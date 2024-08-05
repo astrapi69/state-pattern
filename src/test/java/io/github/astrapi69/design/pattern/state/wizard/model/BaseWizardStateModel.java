@@ -27,52 +27,64 @@ package io.github.astrapi69.design.pattern.state.wizard.model;
 import io.github.astrapi69.design.pattern.state.wizard.BaseWizardState;
 
 /**
- * The enum {@link BaseWizardStateModel} represents three wizard states and the cancel and finish states.
- * The state is only changed if the wizard model is valid.
+ * The enum {@link BaseWizardStateModel} represents three wizard states and the cancel and finish
+ * states. The state is only changed if the wizard model is valid.
  */
-public enum BaseWizardStateModel implements BaseWizardState<BaseWizardStateMachineModel<WizardModel>> {
+public enum BaseWizardStateModel
+	implements BaseWizardState<BaseWizardStateMachineModel<WizardModel>>
+{
 
 	/** The first {@link BaseWizardStateModel} object. */
 	FIRST {
 
 		@Override
-		public void cancel(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidCancel()) {
+		public void cancel(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidCancel())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.CANCELED);
 			}
 		}
 
 		@Override
-		public void finish(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidFinish()) {
+		public void finish(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidFinish())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.FINISHED);
 			}
 		}
 
 		@Override
-		public String getName() {
+		public String getName()
+		{
 			return name();
 		}
 
 		@Override
-		public void goNext(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidNext()) {
+		public void goNext(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidNext())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.SECOND);
 				stateMachine.getModelObject().reset();
 			}
 		}
 
 		@Override
-		public void goPrevious(final BaseWizardStateMachineModel<WizardModel> input) {
+		public void goPrevious(final BaseWizardStateMachineModel<WizardModel> input)
+		{
 		}
 
 		@Override
-		public boolean hasPrevious() {
+		public boolean hasPrevious()
+		{
 			return false;
 		}
 
 		@Override
-		public boolean isFirst() {
+		public boolean isFirst()
+		{
 			return true;
 		}
 	},
@@ -81,35 +93,44 @@ public enum BaseWizardStateModel implements BaseWizardState<BaseWizardStateMachi
 	SECOND {
 
 		@Override
-		public void cancel(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidCancel()) {
+		public void cancel(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidCancel())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.CANCELED);
 			}
 		}
 
 		@Override
-		public void finish(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidFinish()) {
+		public void finish(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidFinish())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.FINISHED);
 			}
 		}
 
 		@Override
-		public String getName() {
+		public String getName()
+		{
 			return name();
 		}
 
 		@Override
-		public void goNext(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidNext()) {
+		public void goNext(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidNext())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.THIRD);
 				stateMachine.getModelObject().reset();
 			}
 		}
 
 		@Override
-		public void goPrevious(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidPrevious()) {
+		public void goPrevious(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidPrevious())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.FIRST);
 				stateMachine.getModelObject().reset();
 			}
@@ -120,43 +141,53 @@ public enum BaseWizardStateModel implements BaseWizardState<BaseWizardStateMachi
 	THIRD {
 
 		@Override
-		public void cancel(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidCancel()) {
+		public void cancel(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidCancel())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.CANCELED);
 			}
 		}
 
 		@Override
-		public void finish(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidFinish()) {
+		public void finish(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidFinish())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.FINISHED);
 			}
 		}
 
 		@Override
-		public String getName() {
+		public String getName()
+		{
 			return name();
 		}
 
 		@Override
-		public void goNext(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
+		public void goNext(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
 		}
 
 		@Override
-		public void goPrevious(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidPrevious()) {
+		public void goPrevious(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidPrevious())
+			{
 				stateMachine.setCurrentState(SECOND);
 				stateMachine.getModelObject().reset();
 			}
 		}
 
 		@Override
-		public boolean hasNext() {
+		public boolean hasNext()
+		{
 			return false;
 		}
 
 		@Override
-		public boolean isLast() {
+		public boolean isLast()
+		{
 			return true;
 		}
 	},
@@ -165,30 +196,37 @@ public enum BaseWizardStateModel implements BaseWizardState<BaseWizardStateMachi
 	CANCELED {
 
 		@Override
-		public void cancel(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidCancel()) {
+		public void cancel(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidCancel())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.CANCELED);
 			}
 		}
 
 		@Override
-		public void finish(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidFinish()) {
+		public void finish(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidFinish())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.FINISHED);
 			}
 		}
 
 		@Override
-		public String getName() {
+		public String getName()
+		{
 			return name();
 		}
 
 		@Override
-		public void goNext(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
+		public void goNext(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
 		}
 
 		@Override
-		public void goPrevious(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
+		public void goPrevious(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
 		}
 	},
 
@@ -196,30 +234,37 @@ public enum BaseWizardStateModel implements BaseWizardState<BaseWizardStateMachi
 	FINISHED {
 
 		@Override
-		public void cancel(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidCancel()) {
+		public void cancel(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidCancel())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.CANCELED);
 			}
 		}
 
 		@Override
-		public void finish(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
-			if (stateMachine.getModelObject().isValidFinish()) {
+		public void finish(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
+			if (stateMachine.getModelObject().isValidFinish())
+			{
 				stateMachine.setCurrentState(BaseWizardStateModel.FINISHED);
 			}
 		}
 
 		@Override
-		public String getName() {
+		public String getName()
+		{
 			return name();
 		}
 
 		@Override
-		public void goNext(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
+		public void goNext(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
 		}
 
 		@Override
-		public void goPrevious(final BaseWizardStateMachineModel<WizardModel> stateMachine) {
+		public void goPrevious(final BaseWizardStateMachineModel<WizardModel> stateMachine)
+		{
 		}
 	}
 }

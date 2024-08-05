@@ -35,17 +35,19 @@ import io.github.astrapi69.design.pattern.state.wizard.WizardStateMachine;
 /**
  * Test class for {@link BaseWizardStateMachine}.
  */
-public class BaseWizardStateMachineTest {
+public class BaseWizardStateMachineTest
+{
 
 	/**
 	 * Test method for the methods previous and next of the {@link WizardStateMachine}.
 	 */
 	@Test
-	public void testWizardStateMachine() {
+	public void testWizardStateMachine()
+	{
 		EnumBaseWizardWizardState expected;
 		BaseWizardState<BaseWizardStateMachine> actual;
 		final BaseWizardStateMachine stateMachine = BaseWizardStateMachine.builder()
-				.currentState(EnumBaseWizardWizardState.FIRST).build();
+			.currentState(EnumBaseWizardWizardState.FIRST).build();
 
 		expected = EnumBaseWizardWizardState.FIRST;
 		stateMachine.previous();
