@@ -98,25 +98,6 @@ public class MyWizardStateMachine extends WizardStateMachine {
 }
 ```
 
-## Classes and Interfaces
-### Button State Machine
-* ButtonState<ST>
-* ButtonStateMachine<T, ST>
-
-### Component State Machine
-* ComponentStateMachine<C, S>
-* AbstractJComponentStateMachine<T extends JComponent, S>
-
-### Wizard State Machine
-* IWizardStateMachine<S>
-* IBaseWizardStateMachine<S>
-* BaseWizardState<ST>
-* WizardState<ST>
-* BaseWizardStateMachine
-* WizardStateMachine
-* BaseWizardStateMachineModel<T>
-
-
 ## Note
 
 No animals were harmed in the making of this library.
