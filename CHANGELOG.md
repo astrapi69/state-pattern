@@ -8,6 +8,7 @@ ADDED:
 
 - new data info class WizardStateInfo with all information from the wizard state object
 - new methods in the interface WizardState for interact with the WizardStateInfo object
+- new enum class NavigationEventState that represents different states of navigation events
 
 CHANGED:
 

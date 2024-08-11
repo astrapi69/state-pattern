@@ -150,7 +150,7 @@ public interface WizardState<ST>
 	 * @param wizardStateInfo
 	 *            the new wizard state info object
 	 */
-	void getWizardStateInfo(WizardStateInfo wizardStateInfo);
+	void setWizardStateInfo(WizardStateInfo wizardStateInfo);
 
 	/**
 	 * Sets the next flag.

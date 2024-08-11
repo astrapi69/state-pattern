@@ -73,7 +73,7 @@ public enum WizardStep implements WizardState<WizardStateMachine>
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}
@@ -108,7 +108,7 @@ public enum WizardStep implements WizardState<WizardStateMachine>
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}
@@ -154,7 +154,7 @@ public enum WizardStep implements WizardState<WizardStateMachine>
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}

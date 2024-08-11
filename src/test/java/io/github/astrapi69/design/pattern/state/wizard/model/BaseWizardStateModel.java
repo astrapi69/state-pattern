@@ -95,7 +95,7 @@ public enum BaseWizardStateModel
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}
@@ -156,7 +156,7 @@ public enum BaseWizardStateModel
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}
@@ -224,7 +224,7 @@ public enum BaseWizardStateModel
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}
@@ -275,7 +275,7 @@ public enum BaseWizardStateModel
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}
@@ -326,7 +326,7 @@ public enum BaseWizardStateModel
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}

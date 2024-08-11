@@ -86,7 +86,7 @@ public enum EnumBaseWizardWizardState implements BaseWizardState<BaseWizardState
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}
@@ -133,7 +133,7 @@ public enum EnumBaseWizardWizardState implements BaseWizardState<BaseWizardState
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}
@@ -191,7 +191,7 @@ public enum EnumBaseWizardWizardState implements BaseWizardState<BaseWizardState
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}
@@ -236,7 +236,7 @@ public enum EnumBaseWizardWizardState implements BaseWizardState<BaseWizardState
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}
@@ -281,7 +281,7 @@ public enum EnumBaseWizardWizardState implements BaseWizardState<BaseWizardState
 		}
 
 		@Override
-		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		public void setWizardStateInfo(WizardStateInfo wizardStateInfo)
 		{
 
 		}
