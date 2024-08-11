@@ -26,6 +26,7 @@ package io.github.astrapi69.design.pattern.state.wizard.step;
 
 import io.github.astrapi69.design.pattern.state.wizard.WizardState;
 import io.github.astrapi69.design.pattern.state.wizard.WizardStateMachine;
+import io.github.astrapi69.design.pattern.state.wizard.model.WizardStateInfo;
 
 /**
  * The enum {@link WizardStep} represents three steps.
@@ -64,6 +65,19 @@ public enum WizardStep implements WizardState<WizardStateMachine>
 		{
 			return true;
 		}
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 	},
 
 	/** The second {@link WizardStep} object. */
@@ -86,6 +100,19 @@ public enum WizardStep implements WizardState<WizardStateMachine>
 		{
 			stateMachine.setCurrentState(FIRST);
 		}
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 	},
 
 	/** The third {@link WizardStep} object. */
@@ -119,6 +146,19 @@ public enum WizardStep implements WizardState<WizardStateMachine>
 		{
 			return true;
 		}
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 	}
 
 }

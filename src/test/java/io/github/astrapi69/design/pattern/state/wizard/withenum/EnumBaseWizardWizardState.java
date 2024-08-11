@@ -26,6 +26,7 @@ package io.github.astrapi69.design.pattern.state.wizard.withenum;
 
 import io.github.astrapi69.design.pattern.state.wizard.BaseWizardState;
 import io.github.astrapi69.design.pattern.state.wizard.BaseWizardStateMachine;
+import io.github.astrapi69.design.pattern.state.wizard.model.WizardStateInfo;
 
 /**
  * The enum {@link EnumBaseWizardWizardState} represents three wizard states and the cancel with the
@@ -78,6 +79,18 @@ public enum EnumBaseWizardWizardState implements BaseWizardState<BaseWizardState
 			return true;
 		}
 
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 	},
 
 	/** The second {@link EnumBaseWizardWizardState} object. */
@@ -111,6 +124,18 @@ public enum EnumBaseWizardWizardState implements BaseWizardState<BaseWizardState
 		public void goPrevious(final BaseWizardStateMachine stateMachine)
 		{
 			stateMachine.setCurrentState(EnumBaseWizardWizardState.FIRST);
+		}
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
 		}
 
 	},
@@ -159,6 +184,17 @@ public enum EnumBaseWizardWizardState implements BaseWizardState<BaseWizardState
 			return true;
 		}
 
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
 	},
 
 	/** The cancel {@link EnumBaseWizardWizardState} object. */
@@ -193,6 +229,18 @@ public enum EnumBaseWizardWizardState implements BaseWizardState<BaseWizardState
 		{
 		}
 
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 	},
 
 	/** The finish {@link EnumBaseWizardWizardState} object. */
@@ -224,6 +272,18 @@ public enum EnumBaseWizardWizardState implements BaseWizardState<BaseWizardState
 		@Override
 		public void goPrevious(final BaseWizardStateMachine stateMachine)
 		{
+		}
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
 		}
 
 	}

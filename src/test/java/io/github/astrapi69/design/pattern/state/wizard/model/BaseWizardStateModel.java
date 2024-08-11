@@ -87,6 +87,19 @@ public enum BaseWizardStateModel
 		{
 			return true;
 		}
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 	},
 
 	/** The second {@link BaseWizardStateModel} object. */
@@ -135,6 +148,19 @@ public enum BaseWizardStateModel
 				stateMachine.getModelObject().reset();
 			}
 		}
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 	},
 
 	/** The third {@link BaseWizardStateModel} object. */
@@ -190,6 +216,19 @@ public enum BaseWizardStateModel
 		{
 			return true;
 		}
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 	},
 
 	/** The cancel {@link BaseWizardStateModel} object. */
@@ -228,6 +267,19 @@ public enum BaseWizardStateModel
 		public void goPrevious(final BaseWizardStateMachineModel<WizardModel> stateMachine)
 		{
 		}
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 	},
 
 	/** The finish {@link BaseWizardStateModel} object. */
@@ -266,5 +318,18 @@ public enum BaseWizardStateModel
 		public void goPrevious(final BaseWizardStateMachineModel<WizardModel> stateMachine)
 		{
 		}
+
+		@Override
+		public WizardStateInfo getWizardStateInfo()
+		{
+			return null;
+		}
+
+		@Override
+		public void getWizardStateInfo(WizardStateInfo wizardStateInfo)
+		{
+
+		}
+
 	}
 }
