@@ -12,8 +12,11 @@ ADDED:
 
 CHANGED:
 
-- update gradle to new version 8.10-rc-1
+- update gradle to new version 8.10
 - update gradle-plugin with the id io.freefair.lombok to new version 8.7.1
+- update of test dependency file-worker to new version 17.4
+- update of test dependency gradle-migration-data to new version 2.4
+- update of test dependency junit-jupiter-params to new version 5.11.0
 
 Version 7
 -------------
