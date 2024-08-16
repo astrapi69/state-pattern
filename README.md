@@ -142,7 +142,7 @@ If you use the new libs.versions.toml file for new automatic catalog versions up
 
 ```
 [versions]
-state-pattern-version=${latestVersion}
+state-pattern-version= "${latestVersion}"
 
 [libraries]
 state-pattern = { module = "io.github.astrapi69:state-pattern", version.ref = "state-pattern-version" }
