@@ -5,7 +5,7 @@
 [![Java CI with Gradle](https://github.com/astrapi69/state-pattern/actions/workflows/gradle.yml/badge.svg)](https://github.com/astrapi69/state-pattern/actions/workflows/gradle.yml)
 [![Coverage Status](https://codecov.io/gh/astrapi69/state-pattern/branch/develop/graph/badge.svg)](https://codecov.io/gh/astrapi69/state-pattern)
 [![Open Issues](https://img.shields.io/github/issues/astrapi69/state-pattern.svg?style=flat)](https://github.com/astrapi69/state-pattern/issues)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/state-pattern/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/state-pattern)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.astrapi69/state-pattern)](https://central.sonatype.com/artifact/io.github.astrapi69/state-pattern)
 [![Javadocs](http://www.javadoc.io/badge/io.github.astrapi69/state-pattern.svg)](http://www.javadoc.io/doc/io.github.astrapi69/state-pattern)
 [![MIT License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
 [![Donate](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
@@ -113,7 +113,7 @@ The source code comes under the liberal MIT License, making state-pattern great 
 
 ## gradle dependency
 
-Replace the variable ${latestVersion} with the current latest version: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/state-pattern/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/state-pattern)
+Replace the variable ${latestVersion} with the current latest version: [![Maven Central](https://img.shields.io/maven-central/v/io.github.astrapi69/state-pattern)](https://central.sonatype.com/artifact/io.github.astrapi69/state-pattern)
 
 You can first define the version in the ext section and add than the following gradle dependency to
 your project `build.gradle` if you want to import the core functionality of state-pattern:
@@ -159,8 +159,7 @@ then add the dependency to the dependencies area
 
 ## Maven dependency
 
-Maven dependency is now on sonatype.
-Check out [sonatype repository](https://oss.sonatype.org/index.html#nexus-search;gav~io.github.astrapi69~state-pattern~~~) for latest snapshots and releases.
+The library is on Maven Central. Check out [Maven Central](https://central.sonatype.com/artifact/io.github.astrapi69/state-pattern) for the latest release.
 
 Add the following maven dependency to your project `pom.xml` if you want to import the core
 functionality of state-pattern:
@@ -196,8 +195,6 @@ Then you can add the dependency to your dependencies:
 
 ## 📸 Snapshots
 
-[![Snapshot](https://img.shields.io/badge/dynamic/xml?url=https://oss.sonatype.org/service/local/repositories/snapshots/content/io/github/astrapi69/state-pattern/maven-metadata.xml&label=snapshot&color=red&query=.//versioning/latest)](https://oss.sonatype.org/content/repositories/snapshots/io/github/astrapi69/state-pattern/)
-
 This section describes how to import snapshot versions into your project.
 Add the following code snippet to your gradle file in the repositories section:
 ```
@@ -206,8 +203,8 @@ repositories {
 ```
 ```groovy
     maven {
-        name "Sonatype Nexus Snapshots"
-        url "https://oss.sonatype.org/content/repositories/snapshots"
+        name "Central Portal Snapshots"
+        url "https://central.sonatype.com/repository/maven-snapshots/"
         mavenContent {
             snapshotsOnly()
         }
